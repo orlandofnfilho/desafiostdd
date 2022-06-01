@@ -1,4 +1,4 @@
-package br.com.gft.desafiostdd.bonus.CalculaEstatisticas.model;
+package br.com.gft.desafiostdd.bonus.model;
 
 import java.util.ArrayList;
 import java.util.List;

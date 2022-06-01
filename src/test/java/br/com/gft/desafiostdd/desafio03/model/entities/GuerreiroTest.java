@@ -34,19 +34,14 @@ class GuerreiroTest {
 	}
 
 	@Test
-	@DisplayName("Deve verificar se o level aumenta ao passar de level = true")
-	public void deveVerificarSeOLevelAumentaAoPssarDeLevel() {
+	@DisplayName("Deve aumentar os atributos ao passar de level => true")
+	public void deveAumentarOsAtributosAoPassarDeLevel() {
 		guerreiro.lvlUp();
-		int newLevel = guerreiro.getLevel();
-		Assertions.assertEquals(81, newLevel);
-	}
-
-	@Test
-	@DisplayName("Deve verificar se a forca aumenta ao passar de level => true")
-	public void deveVerificarSeAForcaAumentamAoPssarDeLevel() {
-		guerreiro.lvlUp();
-		int newForca = guerreiro.getForca();
-		Assertions.assertEquals(145, newForca);
+		Assertions.assertEquals(81, guerreiro.getLevel());
+		Assertions.assertEquals(9600, guerreiro.getVida());
+		Assertions.assertEquals(1700, guerreiro.getMana());
+		Assertions.assertEquals(36, guerreiro.getInteligencia());
+		Assertions.assertEquals(145, guerreiro.getForca());
 	}
 
 }

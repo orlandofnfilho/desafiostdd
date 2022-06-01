@@ -1,10 +1,10 @@
-package br.com.gft.desafiostdd.bonus.CalculaEstatisticas.main;
+package br.com.gft.desafiostdd.bonus.main;
 
 import java.util.Locale;
 
-import br.com.gft.desafiostdd.bonus.CalculaEstatisticas.model.Numbers;
+import br.com.gft.desafiostdd.bonus.model.Numbers;
 
-public class Stats {
+public class Bonus {
 
 	public static void main(String[] args) {
 

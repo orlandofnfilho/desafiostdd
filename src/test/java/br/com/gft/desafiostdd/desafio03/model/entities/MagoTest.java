@@ -43,13 +43,17 @@ class MagoTest {
 		int newLevel = mago.getLevel();
 		Assertions.assertEquals(81, newLevel);
 	}
-	
+
 	@Test
 	@DisplayName("Deve verificar se a inteligencia aumenta ao passar de level => true")
 	public void deveVerificarSeAInteligenciaAumentamAoPssarDeLevel() {
 		mago.lvlUp();
-		int newInteligencia = mago.getInteligencia();
-		Assertions.assertEquals(135, newInteligencia);
+		Assertions.assertEquals(81, mago.getLevel());
+		Assertions.assertEquals(3200, mago.getVida());
+		Assertions.assertEquals(5400, mago.getMana());
+		Assertions.assertEquals(135, mago.getInteligencia());
+		Assertions.assertEquals(41, mago.getForca());
+
 	}
 
 }
