@@ -3,7 +3,7 @@ package br.com.gft.desafiostdd.bonus.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Numbers {
+public class CalcStats {
 
 	private List<Integer> numbers = new ArrayList<>();
 
@@ -27,8 +27,8 @@ public class Numbers {
 	}
 
 	public int qtNumbers() {
-		int qtNumbers = numbers.size();
-		return qtNumbers;
+		int size = numbers.size();
+		return size;
 	}
 
 	public double avg() {

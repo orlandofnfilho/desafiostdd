@@ -15,8 +15,8 @@ class FuncionarioTest {
 	}
 
 	@Test
-	@DisplayName("Deve retorna o salario => true")
-	public void deveRetornarOSalario() {
+	@DisplayName("Deve calcular a bonificacao => 3500.00")
+	public void deveCalcularABonificacao() {
 		double bonificacao = funcionario.bonificacao();
 		Assertions.assertEquals(3500.00, bonificacao, 0.01);
 	}

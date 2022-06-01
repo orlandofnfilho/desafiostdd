@@ -64,7 +64,7 @@ class VeiculoTest {
 	}
 
 	@Test
-	@DisplayName("Deve abastecer o veiculo => litrosCombustivel")
+	@DisplayName("Deve abastecer o veiculo => 40")
 	public void deveAbastecerOVeiculoComUmCombustivel() {
 		veiculo.abastecer(40);
 		int combustivel = veiculo.getLitrosCombustivel();
@@ -85,7 +85,7 @@ class VeiculoTest {
 	}
 
 	@Test
-	@DisplayName("Deve incrementar a velocidade do veiculo => Nova Velocidade")
+	@DisplayName("Deve incrementar a velocidade do veiculo => 20")
 	public void deveAcelerarOVeiculo() {
 		veiculo.ligar();
 		veiculo.abastecer(30);
@@ -109,7 +109,7 @@ class VeiculoTest {
 	}
 
 	@Test
-	@DisplayName("Deve decrementar a velocidade => Nova velocidade")
+	@DisplayName("Deve decrementar a velocidade => 0")
 	public void deveFrearOVeiculoDecrementandoAVelocidade() {
 		veiculo.ligar();
 		veiculo.abastecer(30);

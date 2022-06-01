@@ -5,8 +5,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import br.com.gft.desafiostdd.desafio03.model.entities.Personagem;
-
 class PersonagemTest {
 
 	private Personagem personagem;
@@ -26,7 +24,7 @@ class PersonagemTest {
 	}
 
 	@Test
-	@DisplayName("Deve verificar se incrementa o level => level + 1 ")
+	@DisplayName("Deve verificar se incrementa o level => 11 ")
 	public void deveVerificarSeIncrementaOLevel() {
 		personagem.lvlUp();
 		int level = personagem.getLevel();

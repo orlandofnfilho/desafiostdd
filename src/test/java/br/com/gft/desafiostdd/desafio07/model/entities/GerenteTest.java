@@ -18,8 +18,8 @@ class GerenteTest {
 	}
 
 	@Test
-	@DisplayName("Deve verificar a bonificação  => valor incrementado")
-	public void deveVerificarABonificacaoRetornaOValorIncrementado() {
+	@DisplayName("Deve calcular a bonificacao => 16000.00")
+	public void deveCalcularABonificacao() {
 		double bonificacao = gerente.bonificacao();
 		Assertions.assertEquals(16000.00, bonificacao, 0.01);
 	}

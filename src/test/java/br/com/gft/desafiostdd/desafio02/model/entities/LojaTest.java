@@ -130,7 +130,7 @@ class LojaTest {
 	}
 
 	@Test
-	@DisplayName("Deve calcular o valor do patrimonio da loja => valor do patriomnio")
+	@DisplayName("Deve calcular o valor do patrimonio da loja => 941800.00")
 	public void deveCalcularOPatrimonioDaLoja() {
 		double patrimonio = americanas.calculaPatrimonio();
 		Assertions.assertEquals(941800.00, patrimonio, 0.01);

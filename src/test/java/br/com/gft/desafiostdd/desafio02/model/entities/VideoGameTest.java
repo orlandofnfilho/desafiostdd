@@ -16,14 +16,14 @@ class VideoGameTest {
 	}
 
 	@Test
-	@DisplayName("Deve modificar o preco => Novo preco")
+	@DisplayName("Deve modificar o preco => 1700.00")
 	public void deveModificarOprecoRetornaNovoPreco() {
 		videoGame.setPreco(1700);
 		Assertions.assertEquals(1700.00, videoGame.getPreco(), 0.01);
 	}
 
 	@Test
-	@DisplayName("Deve calcular o imposto sobre video game usado => 25% valor do video game")
+	@DisplayName("Deve calcular o imposto sobre video game usado => 450.00")
 	public void deveCalcularOImpostoSobreVideoGameUsado() {
 		videoGame.setUsado(true);
 		double imposto = videoGame.calculaImposto();
@@ -32,7 +32,7 @@ class VideoGameTest {
 	}
 
 	@Test
-	@DisplayName("Deve calcular o imposto sobre video game novo => 45% valor do video game")
+	@DisplayName("Deve calcular o imposto sobre video game novo => 810.00")
 	public void deveCalcularOImpostoSobreVideoGameNovo() {
 		double imposto = videoGame.calculaImposto();
 		Assertions.assertEquals(810.00, imposto, 0.01);

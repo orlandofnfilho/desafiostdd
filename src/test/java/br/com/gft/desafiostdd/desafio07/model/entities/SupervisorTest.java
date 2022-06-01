@@ -19,8 +19,8 @@ class SupervisorTest {
 	}
 	
 	@Test
-	@DisplayName("Deve verificar a bonificação  => valor incrementado")
-	public void deveVerificarABonificacaoRetornaOValorIncrementado() {
+	@DisplayName("Deve calcular a bonificacao=> 9000.00")
+	public void deveCalcularABonificacao() {
 		double bonificacao = supervisor.bonificacao();
 		Assertions.assertEquals(9000.00, bonificacao, 0.01);
 	}

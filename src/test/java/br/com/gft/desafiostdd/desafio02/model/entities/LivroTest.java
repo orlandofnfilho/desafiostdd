@@ -17,7 +17,7 @@ class LivroTest {
 	}
 
 	@Test
-	@DisplayName("Deve modificar o nome do livro => Novo nome")
+	@DisplayName("Deve modificar o nome do livro => true")
 	public void deveRetornarONomeDoLivro() {
 		livro.setNome("Livro Java POO");
 		Assertions.assertTrue("livro java poo".equalsIgnoreCase(livro.getNome()));
@@ -32,7 +32,7 @@ class LivroTest {
 	}
 
 	@Test
-	@DisplayName("Deve calcular o imposto para livros não educativos => 10% valor do livro")
+	@DisplayName("Deve calcular o imposto para livros não educativos => 5")
 	public void deveCalcularImpostoSobreLivrosNaoEducativos() {
 		double imposto = livro.calculaImposto();
 		Assertions.assertEquals(5, imposto, 0.01);

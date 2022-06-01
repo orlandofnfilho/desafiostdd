@@ -34,8 +34,8 @@ class GuerreiroTest {
 	}
 
 	@Test
-	@DisplayName("Deve aumentar os atributos ao passar de level => true")
-	public void deveAumentarOsAtributosAoPassarDeLevel() {
+	@DisplayName("Deve aumentar os atributos ao passar de level => Novos Atributos")
+	public void deveVerificarSeIncrementaOsAtributosAoPassarDeLevel() {
 		guerreiro.lvlUp();
 		Assertions.assertEquals(81, guerreiro.getLevel());
 		Assertions.assertEquals(9600, guerreiro.getVida());

@@ -2,6 +2,7 @@ package br.com.gft.desafiostdd;
 
 import java.util.Scanner;
 
+import br.com.gft.desafiostdd.bonus.main.Bonus;
 import br.com.gft.desafiostdd.desafio01.main.Desafio01;
 import br.com.gft.desafiostdd.desafio02.main.Desafio02;
 import br.com.gft.desafiostdd.desafio03.main.Desafio03;
@@ -17,10 +18,10 @@ public class App {
 	}
 
 	public static void main(String[] args) {
-		String[] options = { "1- Desafio 1", "2- Desafio 2", "3- Desafio 3", "4- Desafio 7", "5- Sair" };
+		String[] options = { "1- Desafio 1", "2- Desafio 2", "3- Desafio 3", "4- Desafio 7", "5- Bonus ", "6- Sair" };
 		Scanner scanner = new Scanner(System.in);
 		int option = 1;
-		while (option != 5) {
+		while (option != 6) {
 			printMenu(options);
 			try {
 				option = scanner.nextInt();
@@ -42,10 +43,14 @@ public class App {
 					System.out.println();
 					break;
 				case 5:
+					option5();
+					System.out.println();
+					break;
+				case 6:
 					System.out.println("Terminado");
 					break;
 				}
-			} catch (Exception ex) {
+			} catch (Exception e) {
 				System.out.println("Porfavor entre um valor entre 1 e " + options.length);
 				scanner.next();
 			}
@@ -66,6 +71,10 @@ public class App {
 
 	private static void option4() {
 		Desafio07.main(null);
+	}
+
+	private static void option5() {
+		Bonus.main(null);
 	}
 
 }

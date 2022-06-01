@@ -2,7 +2,7 @@ package br.com.gft.desafiostdd.bonus.main;
 
 import java.util.Locale;
 
-import br.com.gft.desafiostdd.bonus.model.Numbers;
+import br.com.gft.desafiostdd.bonus.model.CalcStats;
 
 public class Bonus {
 
@@ -10,7 +10,7 @@ public class Bonus {
 
 		Locale.setDefault(Locale.US);
 
-		Numbers sequence = new Numbers();
+		CalcStats sequence = new CalcStats();
 
 		sequence.addNumbers(6, 9, 15, -2, 92, 11);
 
