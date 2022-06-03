@@ -56,5 +56,4 @@ public class Mago extends Personagem {
 				+ getXp() + ", inteligencia=" + getInteligencia() + ", forca=" + getForca() + ", level=" + getLevel()
 				+ "]";
 	}
-
 }

@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import br.com.gft.desafiostdd.desafio01.model.entities.Veiculo;
 import br.com.gft.desafiostdd.desafio01.model.exceptions.VeiculoException;
 
 class VeiculoTest {
@@ -26,7 +25,7 @@ class VeiculoTest {
 	}
 
 	@Test
-	@DisplayName("Deve ligar o veiculo ligado => VeiculoLigadoExcpetion")
+	@DisplayName("Deve ligar o veiculo ligado => VeiculoException")
 	public void deveLigaroVeiculoLigadoRetornaVeiculoException() {
 		veiculo.ligar();
 		Assertions.assertThrows(VeiculoException.class, () -> veiculo.ligar());
@@ -41,13 +40,13 @@ class VeiculoTest {
 	}
 
 	@Test
-	@DisplayName("Deve desligar o veiculo desligado => Exception")
+	@DisplayName("Deve desligar o veiculo desligado => VeiculoException")
 	public void deveDesligarOVeiculoDesligadoRetornaVeiculoException() {
 		Assertions.assertThrows(VeiculoException.class, () -> veiculo.desligar());
 	}
 
 	@Test
-	@DisplayName("Deve desligar o veiculo em movimento => VeiculoEmMovimentoException")
+	@DisplayName("Deve desligar o veiculo em movimento => VeiculoException")
 	public void deveDesligarOVeiculoEmMovimentoRetornaVeiculoException() {
 		veiculo.ligar();
 		veiculo.abastecer(30);
@@ -72,13 +71,13 @@ class VeiculoTest {
 	}
 
 	@Test
-	@DisplayName("Deve abastecer mais que a capacidade => QtdCombustivelException")
+	@DisplayName("Deve abastecer mais que a capacidade => VeiculoException")
 	public void deveAbastercerMaisQueACapacidadeRetornaQdtCombustivelException() {
 		Assertions.assertThrows(VeiculoException.class, () -> veiculo.abastecer(70));
 	}
 
 	@Test
-	@DisplayName("Deve abastecer mais do que a capacidade => TanqueCheioException")
+	@DisplayName("Deve abastecer mais do que a capacidade => VeiculoException")
 	public void deveChecarACapacidadeDoTanqueRetornaVeiculoException() {
 		veiculo.setLitrosCombustivel(60);
 		Assertions.assertThrows(VeiculoException.class, () -> veiculo.abastecer(10));
@@ -96,14 +95,14 @@ class VeiculoTest {
 	}
 
 	@Test
-	@DisplayName("Deve acelerar sem combustivel => VeiculoSemCombustivelException")
+	@DisplayName("Deve acelerar sem combustivel => VeiculoException")
 	public void deveAcelerarSemCombustivelRetornaVeiculoException() {
 		veiculo.ligar();
 		Assertions.assertThrows(VeiculoException.class, () -> veiculo.acelerar());
 	}
 
 	@Test
-	@DisplayName("Deve acelerar o veiculo desligado => VeiculoDesligadoException")
+	@DisplayName("Deve acelerar o veiculo desligado => VeiculoException")
 	public void deveAcelerarOVeiculoDesligadoRetornaVeiculoException() {
 		Assertions.assertThrows(VeiculoException.class, () -> veiculo.acelerar());
 	}
@@ -120,14 +119,14 @@ class VeiculoTest {
 	}
 
 	@Test
-	@DisplayName("Deve frear o veiculo ligado => VeiculoParadoException")
+	@DisplayName("Deve frear o veiculo ligado => VeiculoException")
 	public void deveFrearOVeiculoParadoRetornaVeiculoException() {
 		veiculo.ligar();
 		Assertions.assertThrows(VeiculoException.class, () -> veiculo.frear());
 	}
 
 	@Test
-	@DisplayName("Deve frear o veiculo desligado => VeiculoDesligadoException")
+	@DisplayName("Deve frear o veiculo desligado => VeiculoException")
 	public void deveFrearOVeiculoDesligadoRetornaVeiculoException() {
 		Assertions.assertThrows(VeiculoException.class, () -> veiculo.frear());
 	}

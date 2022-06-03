@@ -44,5 +44,4 @@ class CalcStatsTest {
 		double avg = sequence.avg();
 		Assertions.assertEquals(21.8333333, avg, 0.0000001);
 	}
-
 }

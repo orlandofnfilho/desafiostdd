@@ -84,8 +84,8 @@ class LojaTest {
 	}
 
 	@Test
-	@DisplayName("Deve verificar se lista os livros da loja => listaLivros")
-	public void deveVerificarSeListaOsLivrosDaLoja() {
+	@DisplayName("Deve Mostrar a lista de livros na loja => true")
+	public void deveMostrarAListaDeLivrosNaLoja() {
 		Assertions.assertDoesNotThrow(() -> americanas.listaLivros());
 	}
 
@@ -124,13 +124,13 @@ class LojaTest {
 	}
 
 	@Test
-	@DisplayName("Deve verificar se lista os games da loja => listaVideoGames")
-	public void deveVerificarSeListaOsGamesDaLoja() {
+	@DisplayName("Deve verificar se lista os games da loja => true")
+	public void deveMostrarAlistaDeVideoGamesNaLoja() {
 		Assertions.assertDoesNotThrow(() -> americanas.listaVideoGames());
 	}
 
 	@Test
-	@DisplayName("Deve calcular o valor do patrimonio da loja => 941800.00")
+	@DisplayName("Deve calcular o valor do patrimonio da loja => valor do patriomnio")
 	public void deveCalcularOPatrimonioDaLoja() {
 		double patrimonio = americanas.calculaPatrimonio();
 		Assertions.assertEquals(941800.00, patrimonio, 0.01);

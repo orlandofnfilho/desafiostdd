@@ -27,9 +27,7 @@ public class Loja {
 	private List<VideoGame> games;
 
 	public void listaLivros() {
-		if (livros == null)
-			throw new SemEstoqueException("A loja não tem livros no seu estoque");
-		if (livros.size() <= 0)
+		if (livros == null || livros.size() == 0)
 			throw new SemEstoqueException("A loja não tem livros no seu estoque");
 		for (Livro l : livros) {
 			System.out.println("Titulo: " + l.getNome() + ", preco: " + l.getPreco() + ", quantidade: " + l.getQtd()
@@ -39,9 +37,7 @@ public class Loja {
 	}
 
 	public void listaVideoGames() {
-		if (games == null)
-			throw new SemEstoqueException("A loja não tem video games no seu estoque");
-		if (games.size() <= 0)
+		if (games == null || games.size() == 0)
 			throw new SemEstoqueException("A loja não tem video games no seu estoque");
 		for (VideoGame v : games) {
 			System.out.println("Video-game: " + v.getModelo() + ", preco: " + v.getPreco() + ", quantidade: "

@@ -76,5 +76,4 @@ public class App {
 	private static void option5() {
 		Bonus.main(null);
 	}
-
 }

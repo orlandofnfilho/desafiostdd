@@ -37,7 +37,7 @@ public class Desafio02 {
 			games.add(ps4Usado);
 			games.add(xbox);
 
-			Loja americanas = new Loja("Americanas", "12345678", livros, games);
+			Loja americanas = Loja.builder().nome("Americanas").cnpj("12345678").livros(livros).games(games).build();
 
 			System.out.println();
 			System.out.println("-----------Desafio 2-----------");
@@ -47,18 +47,24 @@ public class Desafio02 {
 					+ ps4Usado.calculaImposto());
 			System.out.println("Imposto " + ps4.getNome() + " " + ps4.getModelo() + " R$ " + ps4.calculaImposto());
 
-			System.out.println("----------------------------------------------------------------------");
-			System.out.println("A loja " + americanas.getNome() + " possui esses livros para venda: ");
-			americanas.listaLivros();
-			System.out.println("----------------------------------------------------------------------");
-			System.out.println("A loja " + americanas.getNome() + " possui esses video-games para venda: ");
-			americanas.listaVideoGames();
-			System.out.println("----------------------------------------------------------------------");
-			System.out.println(
-					"O patrimonio da loja " + americanas.getNome() + " e R$ " + americanas.calculaPatrimonio());
+			System.out.println("-------------------------------");
+			try {
+				System.out.println("A loja " + americanas.getNome() + " possui esses livros para venda: ");
+				americanas.listaLivros();
+			} catch (SemEstoqueException e) {
+				System.out.println(e.getMessage());
+			}
+			System.out.println("-------------------------------");
+			try {
+				System.out.println("A loja " + americanas.getNome() + " possui esses video-games para venda: ");
 
-		} catch (SemEstoqueException e) {
-			System.out.println("Error: " + e.getMessage());
+				americanas.listaVideoGames();
+			} catch (SemEstoqueException e) {
+				System.out.println(e.getMessage());
+			}
+			System.out.println("-------------------------------");
+			System.out.println(
+					"O patrimonio da loja " + americanas.getNome() + " é R$ " + americanas.calculaPatrimonio());
 		} catch (RuntimeException e) {
 			System.out.println("Error: " + e.getMessage());
 		}

@@ -3,6 +3,11 @@ package br.com.gft.desafiostdd.bonus.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class CalcStats {
 
 	private List<Integer> numbers = new ArrayList<>();

@@ -58,11 +58,10 @@ public class Desafio01 {
 			System.out.println("Veiculo ligado: " + v1.isLigado());
 
 		} catch (VeiculoException e) {
-			System.out.println("Error: " + e.getMessage());
+			System.out.println(e.getMessage());
 		} catch (RuntimeException e) {
 			System.out.println("Error: " + e.getMessage());
 		}
-
 	}
 
 }

@@ -16,12 +16,12 @@ class VendedorTest {
 		Locale.setDefault(Locale.US);
 		vendedor = Vendedor.vendedorBuilder().nome("Pedro").idade(30).salario(2000.00).build();
 	}
-	
+
 	@Test
 	@DisplayName("Deve calcular a bonificacao => 5000.00")
 	public void deveCalcularABonificacao() {
 		double bonificacao = vendedor.bonificacao();
 		Assertions.assertEquals(5000.00, bonificacao, 0.01);
 	}
-	
+
 }

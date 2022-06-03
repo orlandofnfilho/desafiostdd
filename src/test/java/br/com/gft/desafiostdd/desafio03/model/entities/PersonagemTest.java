@@ -18,14 +18,14 @@ class PersonagemTest {
 	}
 
 	@Test
-	@DisplayName("Deve verificar a quantidade de personagens criados => 1")
-	public void deveVerificarAQuantidadeDePersonagensCriados() {
+	@DisplayName("Deve incrementar a quantidade de personagens criados => 1")
+	public void deveIncrementarAQuantidadeDePersonagens() {
 		Assertions.assertEquals(1, Personagem.getSequence());
 	}
 
 	@Test
-	@DisplayName("Deve verificar se incrementa o level => 11 ")
-	public void deveVerificarSeIncrementaOLevel() {
+	@DisplayName("Deve incrementar o level => 11 ")
+	public void deveIncrementarOLevel() {
 		personagem.lvlUp();
 		int level = personagem.getLevel();
 		Assertions.assertEquals(11, level);

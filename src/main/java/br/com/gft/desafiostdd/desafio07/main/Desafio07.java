@@ -16,7 +16,7 @@ public class Desafio07 {
 			Gerente gerente = Gerente.gerenteBuilder().nome("Luiz").idade(45).salario(6000.0).build();
 			Supervisor supervisor = Supervisor.supervisorBuilder().nome("Carlos").idade(35).salario(4000.0).build();
 			Vendedor vendedor = Vendedor.vendedorBuilder().nome("Pedro").idade(30).salario(2000.00).build();
-			
+
 			System.out.println();
 			System.out.println("-----------Desafio 7-----------");
 			System.out.println(gerente);
@@ -25,7 +25,6 @@ public class Desafio07 {
 		} catch (RuntimeException e) {
 			System.out.println("Error: " + e.getMessage());
 		}
-
 	}
 
 }
